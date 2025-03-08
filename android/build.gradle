@@ -1,0 +1,34 @@
+plugins {
+    id 'com.android.application'
+    // If your project uses Kotlin, keep the following line; otherwise, remove it.
+    id 'org.jetbrains.kotlin.android'
+    id 'flutter'
+}
+
+android {
+    namespace "com.example.mi_card_flutter" // Replace with your actual package name
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.example.mi_card_flutter" // Replace with your actual application ID
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+    }
+
+    buildTypes {
+        release {
+            // Configure signing if needed, or remove signingConfig if not required
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    // Add any additional dependencies here
+}
